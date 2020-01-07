@@ -1,0 +1,38 @@
+{
+  "name": "sourcebit",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "husky": "^4.0.0",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1"
+  },
+  "scripts": {
+    "test": "npm run format",
+    "format": "prettier --write \"./**/*.{js,jsx,md,html}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stackbithq/sourcebit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stackbithq/sourcebit/issues"
+  },
+  "homepage": "https://github.com/stackbithq/sourcebit#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,md,html}": [
+      "npm run format",
+      "git add"
+    ]
+  }
+}
