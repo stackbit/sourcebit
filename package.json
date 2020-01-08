@@ -4,8 +4,7 @@
   "description": "Sourcebit helps developers build data-driven JAMstack sites by pulling data from any third-party resource",
   "main": "index.js",
   "dependencies": {
-    "chalk": "^3.0.0",
-    "inquirer": "^7.0.3"
+    "mri": "^1.1.4"
   },
   "devDependencies": {
     "husky": "^4.0.0",

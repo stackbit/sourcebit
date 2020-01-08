@@ -1,9 +1,5 @@
-const chalk = require("chalk");
-const fs = require("fs");
 const path = require("path");
 const Sourcebit = require("./lib/sourcebit");
-const util = require("util");
-const Wizard = require("./lib/wizard");
 
 const instance = new Sourcebit();
 
@@ -28,25 +24,4 @@ module.exports.fetch = config => {
   return instance.runBootstrap(plugins);
 };
 
-module.exports.init = async () => {
-  const wizard = new Wizard();
-  const plugins = await wizard.start();
-  const configPath = path.join(process.cwd(), "sourcebit.js");
-  const moduleExports = util.inspect(
-    {
-      plugins
-    },
-    { compact: false, depth: null }
-  );
-  const config = `module.exports = ${moduleExports}\n`;
-
-  try {
-    fs.writeFileSync(configPath, config);
-
-    console.log(`\nConfiguration saved to ${chalk.bold(configPath)}.`);
-  } catch (error) {
-    console.log("ERROR: Could not create configuration file.");
-
-    process.exit(1);
-  }
-};
+module.exports.setParameters = parameters => instance.setParameters(parameters);
