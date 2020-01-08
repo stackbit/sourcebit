@@ -1,5 +1,6 @@
+#!/usr/bin/env node
 const mri = require("mri");
-const sourcebit = require("./index");
+const sourcebit = require("../index");
 const { _: method, ...parameters } = mri(process.argv.slice(2));
 
 sourcebit.setParameters(parameters);
