@@ -1,27 +1,21 @@
-const path = require("path");
 const Sourcebit = require("./lib/sourcebit");
 
-const instance = new Sourcebit();
-
-module.exports.fetch = config => {
-  // If `config` isn't present, we'll look for a `sourcebit.js` file.
+module.exports.fetch = async (config, runtimeParameters) => {
   if (!config) {
-    const filePath = path.join(process.cwd(), "sourcebit.js");
-
-    try {
-      config = require(filePath);
-    } catch (error) {
-      console.log(
-        "ERROR: Could not find a valid `sourcebit.js` configuration file."
-      );
-
-      process.exit(1);
-    }
+    throw new Error(
+      "ERROR: Could not find a valid `sourcebit.js` configuration file."
+    );
   }
 
+  const instance = new Sourcebit({ runtimeParameters });
   const { plugins = [] } = config;
 
-  return instance.runBootstrap(plugins);
+  instance.loadContextFromCache();
+  instance.loadPlugins(plugins);
+
+  await instance.bootstrapAll();
+
+  return instance.transform();
 };
 
-module.exports.setParameters = parameters => instance.setParameters(parameters);
+module.exports.Sourcebit = Sourcebit;
