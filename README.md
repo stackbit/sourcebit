@@ -89,7 +89,7 @@ It's important to note that while every plugin block is defined with the `module
 
 To ease the process of configuring Sourcebit, we've created a command-line tool that provides an interactive setup process. By asking you a series of questions defined by each plugin, this tool generates a `sourcebit.js` file so that you can get up and running in no time.
 
-To start this process, run `npx sourcebit` in your project directory.
+To start this process, run `npx create-sourcebit` or `npm init sourcebit` in your project directory.
 
 ## Usage
 
