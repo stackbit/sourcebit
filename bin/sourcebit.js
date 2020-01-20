@@ -11,4 +11,10 @@ const configPath = path.resolve(
 );
 const config = require(configPath);
 
+if (typeof sourcebit[method] !== "function") {
+  console.log("Usage: sourcebit fetch <parameters>");
+
+  process.exit(1);
+}
+
 sourcebit[method](config, parameters);
