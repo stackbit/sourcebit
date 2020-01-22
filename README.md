@@ -119,6 +119,12 @@ To use Sourcebit as a command-line tool, run the `sourcebit fetch` command in yo
 $ sourcebit fetch
 ```
 
+Whhen working on content in the CMS, you can automatically update content locally with changes made in the CMS by using the `--watch` flag.
+
+```
+$ sourcebit fetch --watch
+```
+
 ## Plugins
 
 ### Source plugins
