@@ -6,7 +6,11 @@
 
 ## Introduction
 
-Sourcebit connects to multiple data sources, for example data in a headless CMS like Contentful or Sanity, to a destination, such as a JAMstack site built using Jekyll or Hugo. It does this through the use of two types of pugins.
+Sourcebit connects to multiple data sources, for example data in a headless CMS like Contentful or Sanity, to a destination, such as a JAMstack site built using Jekyll or Hugo. The easiest way to understand how this works is to see it in action.
+
+[![](https://img.youtube.com/vi/BrZbWMXB4TQ/0.jpg)](https://www.youtube.com/watch?v=BrZbWMXB4TQ)
+
+Sourcebit works through the use of two types of plugins:
 
 * _Source plugins_ are responsible for fetching data, normalizing it to a standard format, and placing the resulting entries on sets of data called _data buckets_. Subsequently, any combination of plugins may consume, transform and persist these data buckets in any way they like.
 * _Target plugins_ are tasked with writing data into a format and location that other programs – such as static site generators – expect. A target plugin is not required, however. This is useful for situations where the source will be called via code, such as in a site built with tools like Next.js.
