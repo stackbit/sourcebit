@@ -113,13 +113,15 @@ sourcebit.fetch(sourcebitConfig).then(data => {
 
 ### As a command-line tool
 
-To use Sourcebit as a command-line tool, run the `sourcebit fetch` command in your project directory.
+To use Sourcebit as a command-line tool, once it is installed, run the `sourcebit fetch` command in your project directory.
 
 ```
 $ sourcebit fetch
 ```
 
-Whhen working on content in the CMS, you can automatically update content locally with changes made in the CMS by using the `--watch` flag.
+Note that if you do not have your local npm_modules on your PATH, you will need to run `./node_modules/.bin/sourcebit fetch` or [follow the instructions here](https://coderwall.com/p/i5z1cg/automatically-update-path-with-proper-node_modules-bin) to update your PATH.
+
+When working on content in the CMS, you can automatically update content locally with changes made in the CMS by using the `--watch` flag.
 
 ```
 $ sourcebit fetch --watch
