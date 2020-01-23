@@ -12,8 +12,8 @@ Sourcebit connects to multiple data sources, for example data in a headless CMS 
 
 Sourcebit works through the use of two types of plugins:
 
-* _Source plugins_ are responsible for fetching data, normalizing it to a standard format, and placing the resulting entries on sets of data called _data buckets_. Subsequently, any combination of plugins may consume, transform and persist these data buckets in any way they like.
-* _Target plugins_ are tasked with writing data into a format and location that other programs – such as static site generators – expect. A target plugin is not required, however. This is useful for situations where the source will be called via code, such as in a site built with tools like Next.js.
+- _Source plugins_ are responsible for fetching data, normalizing it to a standard format, and placing the resulting entries on sets of data called _data buckets_. Subsequently, any combination of plugins may consume, transform and persist these data buckets in any way they like.
+- _Target plugins_ are tasked with writing data into a format and location that other programs – such as static site generators – expect. A target plugin is not required, however. This is useful for situations where the source will be called via code, such as in a site built with tools like Next.js.
 
 ```
            +----------------+  +---------------+  +-----------------+
@@ -131,6 +131,7 @@ $ sourcebit fetch --watch
 
 ### Source plugins
 
+- [`sourcebit-sample-plugin`](http://npmjs.com/package/sourcebit-sample-plugin): A sample plugin with mock data, for demonstration/educational purposes.
 - [`sourcebit-source-contentful`](http://npmjs.com/package/sourcebit-source-contentful): A source plugin for the [Contentful](https://www.contentful.com/) headless CMS.
 
 ### Target plugins
@@ -139,6 +140,6 @@ $ sourcebit fetch --watch
 
 ### Other plugins
 
-- [`sourcebit-plugin-content-mapper`](http://npmjs.com/package/sourcebit-plugin-content-mapper): A plugin for creating different data buckets from content models.
+## Contributing
 
-> 🚀 If you're interested in creating your own plugin, you might want to check out our [sample plugin repository](https://github.com/stackbithq/sourcebit-sample-plugin), which contains a basic plugin with a fully-annotated source.
+If you'd like to contribute to Sourcebit, either by adding a feature to the core application or by creating a brand new plugin, check out our [contributing guidelines](https://github.com/stackbithq/sourcebit/blob/master/CONTRIBUTING.md).
