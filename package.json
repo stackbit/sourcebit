@@ -18,15 +18,20 @@
   },
   "scripts": {
     "test": "npm run format",
-    "format": "prettier --write \"./**/*.{js,jsx,md,html}\""
+    "format": "prettier --write \"./**/*.{js,json,jsx,md,html}\""
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/stackbithq/sourcebit.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "headless",
+    "headless-cms",
+    "jamstack",
+    "ssg"
+  ],
+  "author": "Stackbit",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/stackbithq/sourcebit/issues"
   },
