@@ -138,8 +138,6 @@ $ sourcebit fetch --watch
 
 - [`sourcebit-target-jekyll`](http://npmjs.com/package/sourcebit-target-jekyll): A target plugin for the [Jekyll](https://www.jekyllrb.com/) static site generator.
 
-### Other plugins
-
 ## Contributing
 
 If you'd like to contribute to Sourcebit, either by adding a feature to the core application or by creating a brand new plugin, check out our [contributing guidelines](https://github.com/stackbithq/sourcebit/blob/master/CONTRIBUTING.md).
