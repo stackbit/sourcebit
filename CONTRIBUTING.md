@@ -23,11 +23,11 @@ This repository uses [Prettier](https://prettier.io/) to standardize code format
 
 ## Creating a plugin
 
-If you want to create your own plugin, be sure to check our [sample plugin](https://github.com/stackbithq/sourcebit-sample-plugin), with a fully-annotated source that explains all the methods you can implement, as well as their arguments and expected return values.
+If you want to create your own plugin, be sure to check our [sample plugin](https://github.com/stackbithq/sourcebit-sample-plugin), which includes a fully-annotated source to explain all the methods that you can implement, their arguments and the expected return values.
 
 ### Adding plugin to registry
 
-If you'd like your plugin to appear as an option within the [interactive setup process](https://github.com/stackbithq/create-sourcebit), add your plugin to [`plugins.json`](https://github.com/stackbithq/create-sourcebit/blob/master/plugins.json) (including all the properties described [here](https://github.com/stackbithq/create-sourcebit#plugin-registry)) and submit a pull request.
+If you'd like your plugin to appear as an option within the [interactive setup process](https://github.com/stackbithq/create-sourcebit), you'll need add your plugin to [`plugins.json`](https://github.com/stackbithq/create-sourcebit/blob/master/plugins.json) (including all the properties described [here](https://github.com/stackbithq/create-sourcebit#plugin-registry)) and submit a pull request.
 
 ### Conventions for source plugins
 
@@ -59,7 +59,7 @@ The `objects` data bucket contains all entries coming from the various data sour
 | `createdAt`          | String | The ISO 8601 representation of the entry's creation date    | `2011-10-05T14:48:00.000Z`    |
 | `updatedAt`          | String | The ISO 8601 representation of the entry's last update date | `2011-10-05T15:30:00.000Z`    |
 
-Additionally, all content fields should be placed at the root level of the entry object and ID field should be named `id`.
+Additionally, all content fields should be placed at the root level of the entry object with the ID field named `id`.
 
 - 🚫
 
