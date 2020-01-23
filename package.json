@@ -21,7 +21,7 @@
     "format": "prettier --write \"./**/*.{js,jsx,md,html}\""
   },
   "repository": {
-    "type": "git",
+    "type": "git"
     "url": "git+https://github.com/stackbithq/sourcebit.git"
   },
   "keywords": [],
