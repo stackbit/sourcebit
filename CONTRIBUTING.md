@@ -4,7 +4,7 @@
 
 This repository uses [Prettier](https://prettier.io/) to standardize code formatting. To validate the format, run `npm run format`.
 
-# Running locally
+## Running locally
 
 1. Clone the repository and install the project's dependencies
 
