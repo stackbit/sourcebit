@@ -8,7 +8,7 @@
 
 Sourcebit connects to multiple data sources, for example data in a headless CMS like Contentful or Sanity, to a destination, such as a JAMstack site built using Jekyll or Hugo. The easiest way to understand how this works is to see it in action via our [video demo on YouTube](https://www.youtube.com/watch?v=BrZbWMXB4TQ).
 
-[![](https://img.youtube.com/vi/BrZbWMXB4TQ/0.jpg)](https://www.youtube.com/watch?v=BrZbWMXB4TQ)
+[![](https://img.youtube.com/vi/fPvfeP1lzTY/0.jpg)](https://www.youtube.com/watch?v=fPvfeP1lzTY)
 
 Sourcebit works through the use of two types of plugins:
 
