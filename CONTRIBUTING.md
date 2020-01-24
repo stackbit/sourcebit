@@ -27,7 +27,7 @@ If you want to create your own plugin, be sure to check our [sample plugin](http
 
 ### Adding plugin to registry
 
-If you'd like your plugin to appear as an option within the [interactive setup process](https://github.com/stackbithq/create-sourcebit), you'll need add your plugin to [`plugins.json`](https://github.com/stackbithq/create-sourcebit/blob/master/plugins.json) (including all the properties described [here](https://github.com/stackbithq/create-sourcebit#plugin-registry)) and submit a pull request.
+If you'd like your plugin to appear as an option within the [interactive setup process](https://github.com/stackbithq/create-sourcebit), you'll need to add your plugin to [`plugins.json`](https://github.com/stackbithq/create-sourcebit/blob/master/plugins.json) (including all the properties described [here](https://github.com/stackbithq/create-sourcebit#plugin-registry)) and submit a pull request.
 
 ### Conventions for source plugins
 
