@@ -1,4 +1,4 @@
-![Sourcebit logo](https://raw.githubusercontent.com/stackbithq/sourcebit/master/Sourcebit.png)
+<img alt="Sourcebit logo" src="https://raw.githubusercontent.com/stackbithq/sourcebit/master/Sourcebit.png" width="450">
 
 [![npm version](https://badge.fury.io/js/sourcebit.svg)](https://badge.fury.io/js/sourcebit)
 
