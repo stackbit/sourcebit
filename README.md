@@ -104,9 +104,10 @@ To use Sourcebit as a CommonJS module, include it in your project and call its `
 
 ```js
 const sourcebit = require("sourcebit");
-const sourcebitConfig = require("./sourcebit.js");
+const config = require("./sourcebit.js");
+const options = {};
 
-sourcebit.fetch(sourcebitConfig).then(data => {
+sourcebit.fetch(config, options).then(data => {
   console.log(data);
 });
 ```
@@ -126,6 +127,12 @@ When working on content in the CMS, you can automatically update content locally
 ```
 $ sourcebit fetch --watch
 ```
+
+### Disabling cache
+
+Sourcebit core has built-in support for caching. Whenever a plugin uses `setPluginContext` to save data to its context object, it gets persisted to a file named `.sourcebit-cache.json` on disk. When `sourcebit fetch` is next executed, the context object will be automatically populated with the cached content before the `bootstrap` method is invoked.
+
+To disable cache, add the flag `--no-cache` to the `sourcebit fetch` command if you're using the CLI. If you're using the CommonJS module, set `cache: false` in the `options` object (i.e. the second parameter of `fetch()`).
 
 ## Plugins
 
