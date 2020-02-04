@@ -1,6 +1,6 @@
 {
   "name": "sourcebit",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Sourcebit helps developers build data-driven JAMstack sites by pulling data from any third-party resource",
   "main": "index.js",
   "bin": {
@@ -9,7 +9,10 @@
   "dependencies": {
     "debug": "^4.1.1",
     "dotenv": "^8.2.0",
-    "mri": "^1.1.4"
+    "mkdirp": "^1.0.3",
+    "mri": "^1.1.4",
+    "ora": "^4.0.3",
+    "yaml": "^1.7.2"
   },
   "devDependencies": {
     "husky": "^4.0.0",
