@@ -4,6 +4,22 @@
 
 > Sourcebit helps developers build data-driven JAMstack sites by pulling data from any third-party resource.
 
+## Table of contents
+
+ - [Introduction](#introduction)
+ - [Getting started](#getting-started)
+    - [Manual installation](#manual-installation)
+    - [Manual configuration](#manual-configuration)
+- [Usage](#usage)
+    - [As a CommonJS module](#as-a-commonjs-module)
+    - [As a command-line tool](#as-a-command-line-tool)
+    - [Disabling cache](#disabling-cache)
+- [Plugin directory](#plugin-directory)
+    - [Source plugins](#source-plugins)
+    - [Target plugins](#target-plugins)
+- [Contributing](#contributing)
+
+
 ## Introduction
 
 Sourcebit connects to multiple data sources, for example data in a headless CMS like Contentful or Sanity, to a destination, such as a JAMstack site built using Jekyll or Hugo. The easiest way to understand how this works is to see it in action via our [video demo on YouTube](https://www.youtube.com/watch?v=BrZbWMXB4TQ).
@@ -15,50 +31,15 @@ Sourcebit works through the use of two types of plugins:
 - _Source plugins_ are responsible for fetching data, normalizing it to a standard format, and placing the resulting entries on sets of data called _data buckets_. Subsequently, any combination of plugins may consume, transform and persist these data buckets in any way they like.
 - _Target plugins_ are tasked with writing data into a format and location that other programs – such as static site generators – expect. A target plugin is not required, however. This is useful for situations where the source will be called via code, such as in a site built with tools like Next.js.
 
-```
-           +----------------+  +---------------+  +-----------------+
-           |                |  |               |  |                 |
-           |   Contentful   |  |    DatoCMS    |  |     Airtable    |
-           |                |  |               |  |                 |
-           +--------\-------+  +-------|-------+  +--------/--------+
-                     \                 |                  /
-                      \                |                 /
-                       \               |                /
-                        \              |               /
-          +--------------|-------------|--------------|-------------+
-          |              |             |              |             |
-          |        +-----|-----+ +-----------+  +-----|-----+       |
-        S |        | (Plugin)  | | (Plugin)  |  | (Plugin)  |       | S
-        O |        |           | |           |  |           |       | O
-        U |        +-----|-----+ +-----|-----+  +-----|-----+       | U
-        R |              |             |              |             | R
-        C |              |             |              |             | C
-        E |        +-----|-----+ +-----|-----+  +-----|-----+       | E
-        B |        | (Plugin)  | | (Plugin)  |  | (Plugin)  |       | B
-        I |        |           | |           |  |           |       | I
-        T |        +-----|-----+ +-----|-----+  +-----|-----+       | T
-          |              |             |              |             |
-          +--------------|-------------|--------------|-------------+
-                        /              |               \
-                       /               |                \
-                      /                |                 \
-                     /                 |                  \
-                    /                  |                   \
-          +--------/--------+ +--------|-------+   +----------------+
-          |                 | |                |   |                |
-          |     Next.js     | |     Jekyll     |   |      Hugo      |
-          |                 | |                |   |                |
-          +-----------------+ +----------------+   +----------------+
+[![Diagram of data flow between plugins](https://user-images.githubusercontent.com/4162329/73833982-ccb88280-4802-11ea-8320-10538296e33b.png)](https://user-images.githubusercontent.com/4162329/73833982-ccb88280-4802-11ea-8320-10538296e33b.png)
 
-```
-
-## Getting Started
+## Getting started
 
 To ease the process of configuring Sourcebit, we've created a command-line tool that provides an interactive setup process that will install the project and any necessary plugins. It asks a series of questions defined by each plugin and generates the necessary configuration file (`sourcebit.js`) so that you can get up and running in no time.
 
 To start this process, in your project directory run `npx create-sourcebit` or, if you've already installed Sourcebit, `npm init sourcebit`.
 
-### Manual Installation
+### Manual installation
 
 Sourcebit is distributed as an [npm module](https://www.npmjs.com/package/sourcebit). We recommend using the interactive setup process, but if you would like to manually install it and add it as a dependency to your project, run:
 
@@ -66,7 +47,7 @@ Sourcebit is distributed as an [npm module](https://www.npmjs.com/package/source
 npm install sourcebit --save
 ```
 
-### Manual Configuration
+### Manual configuration
 
 The interactive setup process will generate the necessary configuration for you. Manual configuration can be useful in scenarios where you need to customize the existing behavior generated by the setup process or if you are creating a specific configuration that the setup process does not yet support.
 
@@ -134,7 +115,7 @@ Sourcebit core has built-in support for caching. Whenever a plugin uses `setPlug
 
 To disable cache, add the flag `--no-cache` to the `sourcebit fetch` command if you're using the CLI. If you're using the CommonJS module, set `cache: false` in the `options` object (i.e. the second parameter of `fetch()`).
 
-## Plugins
+## Plugin directory
 
 ### Source plugins
 
