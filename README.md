@@ -6,19 +6,18 @@
 
 ## Table of contents
 
- - [Introduction](#introduction)
- - [Getting started](#getting-started)
-    - [Manual installation](#manual-installation)
-    - [Manual configuration](#manual-configuration)
+- [Introduction](#introduction)
+- [Getting started](#getting-started)
+  - [Manual installation](#manual-installation)
+  - [Manual configuration](#manual-configuration)
 - [Usage](#usage)
-    - [As a CommonJS module](#as-a-commonjs-module)
-    - [As a command-line tool](#as-a-command-line-tool)
-    - [Disabling cache](#disabling-cache)
+  - [As a CommonJS module](#as-a-commonjs-module)
+  - [As a command-line tool](#as-a-command-line-tool)
+  - [Disabling cache](#disabling-cache)
 - [Plugin directory](#plugin-directory)
-    - [Source plugins](#source-plugins)
-    - [Target plugins](#target-plugins)
+  - [Source plugins](#source-plugins)
+  - [Target plugins](#target-plugins)
 - [Contributing](#contributing)
-
 
 ## Introduction
 
