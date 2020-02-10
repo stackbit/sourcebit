@@ -30,7 +30,7 @@ Sourcebit works through the use of two types of plugins:
 - _Source plugins_ are responsible for fetching data, normalizing it to a standard format, and placing the resulting entries on sets of data called _data buckets_. Subsequently, any combination of plugins may consume, transform and persist these data buckets in any way they like.
 - _Target plugins_ are tasked with writing data into a format and location that other programs – such as static site generators – expect. A target plugin is not required, however. This is useful for situations where the source will be called via code, such as in a site built with tools like Next.js.
 
-[![Diagram of data flow between plugins](https://user-images.githubusercontent.com/4162329/73833982-ccb88280-4802-11ea-8320-10538296e33b.png)](https://user-images.githubusercontent.com/4162329/73833982-ccb88280-4802-11ea-8320-10538296e33b.png)
+Read more about the [anatomy of a plugin](https://github.com/stackbithq/sourcebit/wiki/Anatomy-of-a-plugin).
 
 ## Getting started
 
