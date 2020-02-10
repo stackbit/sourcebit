@@ -1,6 +1,6 @@
 {
   "name": "sourcebit",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Sourcebit helps developers build data-driven JAMstack sites by pulling data from any third-party resource",
   "main": "index.js",
   "bin": {
