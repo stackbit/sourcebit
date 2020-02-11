@@ -17,6 +17,7 @@
 - [Plugin directory](#plugin-directory)
   - [Source plugins](#source-plugins)
   - [Target plugins](#target-plugins)
+  - [Other plugins](#other-plugins)
 - [Contributing](#contributing)
 
 ## Introduction
@@ -124,6 +125,10 @@ To disable cache, add the flag `--no-cache` to the `sourcebit fetch` command if 
 ### Target plugins
 
 - [`sourcebit-target-jekyll`](http://npmjs.com/package/sourcebit-target-jekyll): A target plugin for the [Jekyll](https://www.jekyllrb.com/) static site generator.
+
+### Other plugins
+
+- [`sourcebit-transform-assets`](https://github.com/stackbithq/sourcebit-transform-assets): A plugin for downloading remote assets
 
 ## Contributing
 
