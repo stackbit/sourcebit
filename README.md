@@ -120,7 +120,8 @@ To disable cache, add the flag `--no-cache` to the `sourcebit fetch` command if 
 ### Source plugins
 
 - [`sourcebit-sample-plugin`](http://npmjs.com/package/sourcebit-sample-plugin): A sample plugin with mock data, for demonstration/educational purposes.
-- [`sourcebit-source-contentful`](http://npmjs.com/package/sourcebit-source-contentful): A source plugin for the [Contentful](https://www.contentful.com/) headless CMS.
+- [`sourcebit-source-contentful`](http://npmjs.com/package/sourcebit-source-contentful): A source plugin for [Contentful](https://www.contentful.com/).
+- [`sourcebit-source-sanity`](http://npmjs.com/package/sourcebit-source-contentful): A source plugin for [Sanity](https://sanity.io/).
 
 ### Target plugins
 
