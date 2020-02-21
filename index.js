@@ -10,7 +10,6 @@ module.exports.fetch = async (config, runtimeParameters) => {
   const instance = new Sourcebit({ runtimeParameters });
   const { plugins = [] } = config;
 
-  instance.loadContextFromCache();
   instance.loadPlugins(plugins);
 
   await instance.bootstrapAll();

@@ -9,6 +9,7 @@
   "dependencies": {
     "debug": "^4.1.1",
     "dotenv": "^8.2.0",
+    "lodash": "^4.17.15",
     "mkdirp": "^1.0.3",
     "mri": "^1.1.4",
     "ora": "^4.0.3",
