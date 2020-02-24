@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 require("dotenv").config();
 const commander = require("commander");
-const mri = require("mri");
 const sourcebit = require("../index");
 const path = require("path");
 const pkg = require("../package.json");
@@ -23,5 +22,14 @@ commander
 
     sourcebit.fetch(config, runtimeParameters);
   });
+
+commander.on("command:*", () => {
+  console.error(
+    "Invalid command: %s\nSee --help for a list of available commands.",
+    commander.args.join(" ")
+  );
+
+  process.exit(1);
+});
 
 commander.parse(process.argv);
