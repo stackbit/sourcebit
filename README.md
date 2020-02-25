@@ -120,13 +120,13 @@ To disable cache, add the flag `--no-cache` to the `sourcebit fetch` command if 
 
 Sourcebit is designed to be completely extensible. Documentation on how to build plugins can be found on our [wiki](https://github.com/stackbithq/sourcebit/wiki).
 
-* [Anatomy of a plugin](https://github.com/stackbithq/sourcebit/wiki/Anatomy-of-a-plugin)
-* [Configuration](https://github.com/stackbithq/sourcebit/wiki/Configuration)
-* [Data normalization](https://github.com/stackbithq/sourcebit/wiki/Data-normalization)
-* [Debugging](https://github.com/stackbithq/sourcebit/wiki/Debugging)
-* [Plugin API](https://github.com/stackbithq/sourcebit/wiki/Plugin-API)
-* [Plugin registry](https://github.com/stackbithq/sourcebit/wiki/Plugin-registry)
-* [Writing files to disk](https://github.com/stackbithq/sourcebit/wiki/Writing-files-to-disk)
+- [Anatomy of a plugin](https://github.com/stackbithq/sourcebit/wiki/Anatomy-of-a-plugin)
+- [Configuration](https://github.com/stackbithq/sourcebit/wiki/Configuration)
+- [Data normalization](https://github.com/stackbithq/sourcebit/wiki/Data-normalization)
+- [Debugging](https://github.com/stackbithq/sourcebit/wiki/Debugging)
+- [Plugin API](https://github.com/stackbithq/sourcebit/wiki/Plugin-API)
+- [Plugin registry](https://github.com/stackbithq/sourcebit/wiki/Plugin-registry)
+- [Writing files to disk](https://github.com/stackbithq/sourcebit/wiki/Writing-files-to-disk)
 
 ### Plugin directory
 
