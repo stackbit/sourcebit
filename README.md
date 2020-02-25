@@ -1,5 +1,6 @@
 <img alt="Sourcebit logo" src="https://raw.githubusercontent.com/stackbithq/sourcebit/master/Sourcebit.svg?sanitize=true" width="300">
 
+![Node CI](https://github.com/stackbithq/sourcebit/workflows/Node%20CI/badge.svg?branch=master)
 [![npm version](https://badge.fury.io/js/sourcebit.svg)](https://badge.fury.io/js/sourcebit)
 
 > Sourcebit helps developers build data-driven JAMstack sites by pulling data from any third-party resource.
