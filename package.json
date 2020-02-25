@@ -21,7 +21,7 @@
     "prettier": "^1.19.1"
   },
   "scripts": {
-    "test": "jest",
+    "test": "npm run format && jest",
     "test:watch": "jest --watch",
     "format": "prettier --write \"./**/*.{js,json,jsx,md,html}\""
   },
