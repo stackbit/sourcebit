@@ -115,19 +115,31 @@ Sourcebit core has built-in support for caching. Whenever a plugin uses `setPlug
 
 To disable cache, add the flag `--no-cache` to the `sourcebit fetch` command if you're using the CLI. If you're using the CommonJS module, set `cache: false` in the `options` object (i.e. the second parameter of `fetch()`).
 
-## Plugin directory
+## Plugins
 
-### Source plugins
+Sourcebit is designed to be completely extensible. Documentation on how to build plugins can be found on our [wiki](https://github.com/stackbithq/sourcebit/wiki).
+
+* [Anatomy of a plugin](https://github.com/stackbithq/sourcebit/wiki/Anatomy-of-a-plugin)
+* [Configuration](https://github.com/stackbithq/sourcebit/wiki/Configuration)
+* [Data normalization](https://github.com/stackbithq/sourcebit/wiki/Data-normalization)
+* [Debugging](https://github.com/stackbithq/sourcebit/wiki/Debugging)
+* [Plugin API](https://github.com/stackbithq/sourcebit/wiki/Plugin-API)
+* [Plugin registry](https://github.com/stackbithq/sourcebit/wiki/Plugin-registry)
+* [Writing files to disk](https://github.com/stackbithq/sourcebit/wiki/Writing-files-to-disk)
+
+### Plugin directory
+
+#### Source plugins
 
 - [`sourcebit-sample-plugin`](http://npmjs.com/package/sourcebit-sample-plugin): A sample plugin with mock data, for demonstration/educational purposes.
 - [`sourcebit-source-contentful`](http://npmjs.com/package/sourcebit-source-contentful): A source plugin for [Contentful](https://www.contentful.com/).
 - [`sourcebit-source-sanity`](http://npmjs.com/package/sourcebit-source-contentful): A source plugin for [Sanity](https://sanity.io/).
 
-### Target plugins
+#### Target plugins
 
 - [`sourcebit-target-jekyll`](http://npmjs.com/package/sourcebit-target-jekyll): A target plugin for the [Jekyll](https://www.jekyllrb.com/) static site generator.
 
-### Other plugins
+#### Other plugins
 
 - [`sourcebit-transform-assets`](https://github.com/stackbithq/sourcebit-transform-assets): A plugin for downloading remote assets
 
