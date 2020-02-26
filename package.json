@@ -17,11 +17,13 @@
   },
   "devDependencies": {
     "husky": "^4.0.0",
+    "jest": "^25.1.0",
     "lint-staged": "^9.5.0",
     "prettier": "^1.19.1"
   },
   "scripts": {
-    "test": "npm run format",
+    "test": "npm run format && jest",
+    "test:watch": "jest --watch",
     "format": "prettier --write \"./**/*.{js,json,jsx,md,html}\""
   },
   "repository": {
