@@ -139,6 +139,7 @@ Sourcebit is designed to be completely extensible. Documentation on how to build
 
 #### Target plugins
 
+- [`sourcebit-target-hugo`](http://npmjs.com/package/sourcebit-target-hugo): A target plugin for the [Hugo](https://gohugo.io/) static site generator.
 - [`sourcebit-target-jekyll`](http://npmjs.com/package/sourcebit-target-jekyll): A target plugin for the [Jekyll](https://www.jekyllrb.com/) static site generator.
 
 #### Other plugins
