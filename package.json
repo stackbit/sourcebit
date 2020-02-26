@@ -22,7 +22,6 @@
     "prettier": "^1.19.1"
   },
   "scripts": {
-    "ci": "npm run lint && npm run test -- --coverage",
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "prettier --write \"./**/*.{js,json,jsx,md,html}\""
