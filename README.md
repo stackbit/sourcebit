@@ -135,7 +135,7 @@ Sourcebit is designed to be completely extensible. Documentation on how to build
 
 - [`sourcebit-sample-plugin`](http://npmjs.com/package/sourcebit-sample-plugin): A sample plugin with mock data, for demonstration/educational purposes.
 - [`sourcebit-source-contentful`](http://npmjs.com/package/sourcebit-source-contentful): A source plugin for [Contentful](https://www.contentful.com/).
-- [`sourcebit-source-sanity`](http://npmjs.com/package/sourcebit-source-contentful): A source plugin for [Sanity](https://sanity.io/).
+- [`sourcebit-source-sanity`](http://npmjs.com/package/sourcebit-source-sanity): A source plugin for [Sanity](https://sanity.io/).
 
 #### Target plugins
 
