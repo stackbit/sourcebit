@@ -1,21 +1,29 @@
 const Sourcebit = require("./lib/sourcebit");
 
-module.exports.fetch = async (config, runtimeParameters) => {
+module.exports.fetch = (config, runtimeParameters, transformCallback) => {
   if (!config) {
     throw new Error(
       "ERROR: Could not find a valid `sourcebit.js` configuration file."
     );
   }
 
-  const instance = new Sourcebit({ runtimeParameters });
+  if (typeof runtimeParameters === "function") {
+    transformCallback = runtimeParameters;
+    runtimeParameters = {};
+  }
+
+  const instance = new Sourcebit({ runtimeParameters, transformCallback });
   const { plugins = [] } = config;
 
-  instance.loadContextFromCache();
   instance.loadPlugins(plugins);
 
-  await instance.bootstrapAll();
+  const transformData = instance
+    .bootstrapAll()
+    .then(() => instance.transform());
 
-  return instance.transform();
+  if (typeof transformCallback !== "function") {
+    return transformData;
+  }
 };
 
 module.exports.Sourcebit = Sourcebit;
