@@ -22,9 +22,10 @@
     "prettier": "^1.19.1"
   },
   "scripts": {
-    "test": "npm run format && jest",
+    "ci": "npm run lint && npm run test -- --coverage",
+    "test": "jest",
     "test:watch": "jest --watch",
-    "format": "prettier --write \"./**/*.{js,json,jsx,md,html}\""
+    "lint": "prettier --write \"./**/*.{js,json,jsx,md,html}\""
   },
   "repository": {
     "type": "git",
