@@ -10,6 +10,7 @@ commander
   .command("fetch")
   .option("-c, --configPath", "specify the location of the configuration file")
   .option("-w, --watch", "run continuously in watch mode")
+  .option("-q, --quiet", "disable logging messages to the console")
   .action(({ configPath: customConfigPath, watch }) => {
     const configPath = path.resolve(
       process.cwd(),
