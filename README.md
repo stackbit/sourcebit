@@ -37,6 +37,8 @@ Read more about the [anatomy of a plugin](https://github.com/stackbithq/sourcebi
 
 ## Getting started
 
+**For a complete getting started walkthrough, check out this step-by-step tutorial: <https://www.stackbit.com/blog/data-driven-jamstack-sourcebit/>**
+
 To ease the process of configuring Sourcebit, we've created a command-line tool that provides an interactive setup process that will install the project and any necessary plugins. It asks a series of questions defined by each plugin and generates the necessary configuration file (`sourcebit.js`) so that you can get up and running in no time.
 
 To start this process, in your project directory run `npx create-sourcebit` or, if you've already installed Sourcebit, `npm init sourcebit`.
@@ -118,6 +120,8 @@ Sourcebit core has built-in support for caching. Whenever a plugin uses `setPlug
 To disable cache, add the flag `--no-cache` to the `sourcebit fetch` command if you're using the CLI. If you're using the CommonJS module, set `cache: false` in the `options` object (i.e. the second parameter of `fetch()`).
 
 ## Plugins
+
+**For a step-by-step guide to creating a plugin for Sourcebit, check out this tutorial: <https://www.stackbit.com/blog/sourcebit-plugin/>**
 
 Sourcebit is designed to be completely extensible. Documentation on how to build plugins can be found on our [wiki](https://github.com/stackbithq/sourcebit/wiki).
 
