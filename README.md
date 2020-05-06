@@ -140,11 +140,13 @@ Sourcebit is designed to be completely extensible. Documentation on how to build
 - [`sourcebit-sample-plugin`](http://npmjs.com/package/sourcebit-sample-plugin): A sample plugin with mock data, for demonstration/educational purposes.
 - [`sourcebit-source-contentful`](http://npmjs.com/package/sourcebit-source-contentful): A source plugin for [Contentful](https://www.contentful.com/).
 - [`sourcebit-source-sanity`](http://npmjs.com/package/sourcebit-source-sanity): A source plugin for [Sanity](https://sanity.io/).
+- [`@kentico/sourcebit-source-kontent`](https://www.npmjs.com/package/@kentico/sourcebit-source-kontent): A source plugin for [Kontent](https://bit.ly/2yvEEWs).
 
 #### Target plugins
 
 - [`sourcebit-target-hugo`](http://npmjs.com/package/sourcebit-target-hugo): A target plugin for the [Hugo](https://gohugo.io/) static site generator.
 - [`sourcebit-target-jekyll`](http://npmjs.com/package/sourcebit-target-jekyll): A target plugin for the [Jekyll](https://www.jekyllrb.com/) static site generator.
+- [`sourcebit-target-next`](https://www.npmjs.com/package/sourcebit-target-next): A target plugin for the [Next.js](https://nextjs.org/) framework.
 
 #### Other plugins
 
