@@ -1,3 +1,4 @@
+require("dotenv").config();
 const Sourcebit = require("./lib/sourcebit");
 
 module.exports.fetch = (config, runtimeParameters, transformCallback) => {

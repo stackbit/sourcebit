@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-require("dotenv").config();
 const commander = require("commander");
 const sourcebit = require("../index");
 const path = require("path");
