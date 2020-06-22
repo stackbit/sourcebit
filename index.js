@@ -1,30 +1,26 @@
-require("dotenv").config();
-const Sourcebit = require("./lib/sourcebit");
+require('dotenv').config();
+const Sourcebit = require('./lib/sourcebit');
 
 module.exports.fetch = (config, runtimeParameters, transformCallback) => {
-  if (!config) {
-    throw new Error(
-      "ERROR: Could not find a valid `sourcebit.js` configuration file."
-    );
-  }
+    if (!config) {
+        throw new Error('ERROR: Could not find a valid `sourcebit.js` configuration file.');
+    }
 
-  if (typeof runtimeParameters === "function") {
-    transformCallback = runtimeParameters;
-    runtimeParameters = {};
-  }
+    if (typeof runtimeParameters === 'function') {
+        transformCallback = runtimeParameters;
+        runtimeParameters = {};
+    }
 
-  const instance = new Sourcebit({ runtimeParameters, transformCallback });
-  const { plugins = [] } = config;
+    const instance = new Sourcebit({ runtimeParameters, transformCallback });
+    const { plugins = [] } = config;
 
-  instance.loadPlugins(plugins);
+    instance.loadPlugins(plugins);
 
-  const transformData = instance
-    .bootstrapAll()
-    .then(() => instance.transform());
+    const transformData = instance.bootstrapAll().then(() => instance.transform());
 
-  if (typeof transformCallback !== "function") {
-    return transformData;
-  }
+    if (typeof transformCallback !== 'function') {
+        return transformData;
+    }
 };
 
 module.exports.Sourcebit = Sourcebit;

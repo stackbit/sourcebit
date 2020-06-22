@@ -1,56 +1,58 @@
 {
-  "name": "sourcebit",
-  "version": "0.8.1",
-  "description": "Sourcebit helps developers build data-driven JAMstack sites by pulling data from any third-party resource",
-  "main": "index.js",
-  "bin": {
-    "sourcebit": "./bin/sourcebit.js"
-  },
-  "dependencies": {
-    "commander": "^4.1.1",
-    "debug": "^4.1.1",
-    "dotenv": "^8.2.0",
-    "lodash": "^4.17.15",
-    "mkdirp": "^1.0.3",
-    "ora": "^4.0.3",
-    "yaml": "^1.7.2"
-  },
-  "devDependencies": {
-    "husky": "^4.0.0",
-    "jest": "^25.1.0",
-    "lint-staged": "^9.5.0",
-    "prettier": "^1.19.1"
-  },
-  "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "lint": "prettier --write \"./**/*.{js,json,jsx,md,html}\""
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/stackbithq/sourcebit.git"
-  },
-  "keywords": [
-    "headless",
-    "headless-cms",
-    "jamstack",
-    "ssg"
-  ],
-  "author": "Stackbit",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/stackbithq/sourcebit/issues"
-  },
-  "homepage": "https://github.com/stackbithq/sourcebit#readme",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx,md,html}": [
-      "npm run lint",
-      "git add"
-    ]
-  }
+    "name": "sourcebit",
+    "version": "0.8.1",
+    "description": "Sourcebit helps developers build data-driven JAMstack sites by pulling data from any third-party resource",
+    "main": "index.js",
+    "bin": {
+        "sourcebit": "./bin/sourcebit.js"
+    },
+    "dependencies": {
+        "commander": "^4.1.1",
+        "debug": "^4.1.1",
+        "dotenv": "^8.2.0",
+        "lodash": "^4.17.15",
+        "mkdirp": "^1.0.3",
+        "ora": "^4.0.3",
+        "yaml": "^1.7.2"
+    },
+    "devDependencies": {
+        "@stackbit/prettier-config": "^1.0.0",
+        "husky": "^4.0.0",
+        "jest": "^25.1.0",
+        "lint-staged": "^9.5.0",
+        "prettier": "^1.19.1"
+    },
+    "scripts": {
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "lint": "prettier --write \"./**/*.{js,json,jsx,md,html}\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/stackbithq/sourcebit.git"
+    },
+    "keywords": [
+        "headless",
+        "headless-cms",
+        "jamstack",
+        "ssg"
+    ],
+    "author": "Stackbit",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/stackbithq/sourcebit/issues"
+    },
+    "homepage": "https://github.com/stackbithq/sourcebit#readme",
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{js,jsx,md,html}": [
+            "npm run lint",
+            "git add"
+        ]
+    },
+    "prettier": "@stackbit/prettier-config"
 }
