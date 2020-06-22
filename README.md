@@ -8,19 +8,19 @@
 
 ## Table of contents
 
-- [Introduction](#introduction)
-- [Getting started](#getting-started)
-  - [Manual installation](#manual-installation)
-  - [Manual configuration](#manual-configuration)
-- [Usage](#usage)
-  - [As a CommonJS module](#as-a-commonjs-module)
-  - [As a command-line tool](#as-a-command-line-tool)
-  - [Disabling cache](#disabling-cache)
-- [Plugin directory](#plugin-directory)
-  - [Source plugins](#source-plugins)
-  - [Target plugins](#target-plugins)
-  - [Other plugins](#other-plugins)
-- [Contributing](#contributing)
+-   [Introduction](#introduction)
+-   [Getting started](#getting-started)
+    -   [Manual installation](#manual-installation)
+    -   [Manual configuration](#manual-configuration)
+-   [Usage](#usage)
+    -   [As a CommonJS module](#as-a-commonjs-module)
+    -   [As a command-line tool](#as-a-command-line-tool)
+    -   [Disabling cache](#disabling-cache)
+-   [Plugin directory](#plugin-directory)
+    -   [Source plugins](#source-plugins)
+    -   [Target plugins](#target-plugins)
+    -   [Other plugins](#other-plugins)
+-   [Contributing](#contributing)
 
 ## Introduction
 
@@ -30,8 +30,8 @@ Sourcebit connects to multiple data sources, for example data in a headless CMS 
 
 Sourcebit works through the use of two types of plugins:
 
-- _Source plugins_ are responsible for fetching data, normalizing it to a standard format, and placing the resulting entries on sets of data called _data buckets_. Subsequently, any combination of plugins may consume, transform and persist these data buckets in any way they like.
-- _Target plugins_ are tasked with writing data into a format and location that other programs – such as static site generators – expect. A target plugin is not required, however. This is useful for situations where the source will be called via code, such as in a site built with tools like Next.js.
+-   _Source plugins_ are responsible for fetching data, normalizing it to a standard format, and placing the resulting entries on sets of data called _data buckets_. Subsequently, any combination of plugins may consume, transform and persist these data buckets in any way they like.
+-   _Target plugins_ are tasked with writing data into a format and location that other programs – such as static site generators – expect. A target plugin is not required, however. This is useful for situations where the source will be called via code, such as in a site built with tools like Next.js.
 
 Read more about the [anatomy of a plugin](https://github.com/stackbithq/sourcebit/wiki/Anatomy-of-a-plugin).
 
@@ -61,21 +61,21 @@ It looks something like this:
 
 ```js
 module.exports = {
-  plugins: [
-    {
-      module: require("sourcebit-some-plugin-1"),
-      options: {
-        pluginOption1: "foo",
-        pluginOptino2: "bar"
-      }
-    },
-    {
-      module: require("sourcebit-some-plugin-2"),
-      options: {
-        pluginFunction1: (a, b) => a + b
-      }
-    }
-  ]
+    plugins: [
+        {
+            module: require('sourcebit-some-plugin-1'),
+            options: {
+                pluginOption1: 'foo',
+                pluginOptino2: 'bar'
+            }
+        },
+        {
+            module: require('sourcebit-some-plugin-2'),
+            options: {
+                pluginFunction1: (a, b) => a + b
+            }
+        }
+    ]
 };
 ```
 
@@ -88,12 +88,12 @@ It's important to note that while every plugin block is defined with the `module
 To use Sourcebit as a CommonJS module, include it in your project and call its `fetch` method.
 
 ```js
-const sourcebit = require("sourcebit");
-const config = require("./sourcebit.js");
+const sourcebit = require('sourcebit');
+const config = require('./sourcebit.js');
 const options = {};
 
 sourcebit.fetch(config, options).then(data => {
-  console.log(data);
+    console.log(data);
 });
 ```
 
@@ -125,32 +125,32 @@ To disable cache, add the flag `--no-cache` to the `sourcebit fetch` command if 
 
 Sourcebit is designed to be completely extensible. Documentation on how to build plugins can be found on our [wiki](https://github.com/stackbithq/sourcebit/wiki).
 
-- [Anatomy of a plugin](https://github.com/stackbithq/sourcebit/wiki/Anatomy-of-a-plugin)
-- [Configuration](https://github.com/stackbithq/sourcebit/wiki/Configuration)
-- [Data normalization](https://github.com/stackbithq/sourcebit/wiki/Data-normalization)
-- [Debugging](https://github.com/stackbithq/sourcebit/wiki/Debugging)
-- [Plugin API](https://github.com/stackbithq/sourcebit/wiki/Plugin-API)
-- [Plugin registry](https://github.com/stackbithq/sourcebit/wiki/Plugin-registry)
-- [Writing files to disk](https://github.com/stackbithq/sourcebit/wiki/Writing-files-to-disk)
+-   [Anatomy of a plugin](https://github.com/stackbithq/sourcebit/wiki/Anatomy-of-a-plugin)
+-   [Configuration](https://github.com/stackbithq/sourcebit/wiki/Configuration)
+-   [Data normalization](https://github.com/stackbithq/sourcebit/wiki/Data-normalization)
+-   [Debugging](https://github.com/stackbithq/sourcebit/wiki/Debugging)
+-   [Plugin API](https://github.com/stackbithq/sourcebit/wiki/Plugin-API)
+-   [Plugin registry](https://github.com/stackbithq/sourcebit/wiki/Plugin-registry)
+-   [Writing files to disk](https://github.com/stackbithq/sourcebit/wiki/Writing-files-to-disk)
 
 ### Plugin directory
 
 #### Source plugins
 
-- [`sourcebit-sample-plugin`](http://npmjs.com/package/sourcebit-sample-plugin): A sample plugin with mock data, for demonstration/educational purposes.
-- [`sourcebit-source-contentful`](http://npmjs.com/package/sourcebit-source-contentful): A source plugin for [Contentful](https://www.contentful.com/).
-- [`sourcebit-source-sanity`](http://npmjs.com/package/sourcebit-source-sanity): A source plugin for [Sanity](https://sanity.io/).
-- [`@kentico/sourcebit-source-kontent`](https://www.npmjs.com/package/@kentico/sourcebit-source-kontent): A source plugin for [Kontent](https://bit.ly/2yvEEWs).
+-   [`sourcebit-sample-plugin`](http://npmjs.com/package/sourcebit-sample-plugin): A sample plugin with mock data, for demonstration/educational purposes.
+-   [`sourcebit-source-contentful`](http://npmjs.com/package/sourcebit-source-contentful): A source plugin for [Contentful](https://www.contentful.com/).
+-   [`sourcebit-source-sanity`](http://npmjs.com/package/sourcebit-source-sanity): A source plugin for [Sanity](https://sanity.io/).
+-   [`@kentico/sourcebit-source-kontent`](https://www.npmjs.com/package/@kentico/sourcebit-source-kontent): A source plugin for [Kontent](https://bit.ly/2yvEEWs).
 
 #### Target plugins
 
-- [`sourcebit-target-hugo`](http://npmjs.com/package/sourcebit-target-hugo): A target plugin for the [Hugo](https://gohugo.io/) static site generator.
-- [`sourcebit-target-jekyll`](http://npmjs.com/package/sourcebit-target-jekyll): A target plugin for the [Jekyll](https://www.jekyllrb.com/) static site generator.
-- [`sourcebit-target-next`](https://www.npmjs.com/package/sourcebit-target-next): A target plugin for the [Next.js](https://nextjs.org/) framework.
+-   [`sourcebit-target-hugo`](http://npmjs.com/package/sourcebit-target-hugo): A target plugin for the [Hugo](https://gohugo.io/) static site generator.
+-   [`sourcebit-target-jekyll`](http://npmjs.com/package/sourcebit-target-jekyll): A target plugin for the [Jekyll](https://www.jekyllrb.com/) static site generator.
+-   [`sourcebit-target-next`](https://www.npmjs.com/package/sourcebit-target-next): A target plugin for the [Next.js](https://nextjs.org/) framework.
 
 #### Other plugins
 
-- [`sourcebit-transform-assets`](https://github.com/stackbithq/sourcebit-transform-assets): A plugin for downloading remote assets
+-   [`sourcebit-transform-assets`](https://github.com/stackbithq/sourcebit-transform-assets): A plugin for downloading remote assets
 
 ## Contributing
 
