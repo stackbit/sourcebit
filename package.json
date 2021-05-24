@@ -25,7 +25,9 @@
     "scripts": {
         "test": "jest",
         "test:watch": "jest --watch",
-        "lint": "prettier --write \"./**/*.{js,json,jsx,md,html}\""
+        "lint": "prettier --write \"./**/*.{js,json,jsx,md,html}\"",
+        "version-minor": "npm version minor -m \"bumped version to v%s\"",
+        "version-patch": "npm version patch -m \"bumped version to v%s\""
     },
     "repository": {
         "type": "git",
