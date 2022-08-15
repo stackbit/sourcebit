@@ -4,6 +4,8 @@
 [![Coverage Status](https://coveralls.io/repos/github/stackbithq/sourcebit/badge.svg?v=20200302)](https://coveralls.io/github/stackbithq/sourcebit)
 [![npm version](https://badge.fury.io/js/sourcebit.svg)](https://badge.fury.io/js/sourcebit)
 
+> Deprecation warning: As of now, we are not currently planning to continue development on Sourcebit. [Read more about Sourcebit successor here](https://github.com/stackbit/sourcebit/issues/31#issuecomment-1214975778)
+
 > Sourcebit helps developers build data-driven JAMstack sites by pulling data from any third-party resource.
 
 ## Table of contents
